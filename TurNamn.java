@@ -1,4 +1,4 @@
-package com.company;
+package elffors.GTA.projekt;
 
 import java.util.*;
 
@@ -8,27 +8,23 @@ public class TurNamn {
 
     public TurNamn(String namn) {
         this.namn = namn;
-        this.turLista = new ArrayList<Tur>();
+        this.turLista = new ArrayList<>();
     }
 
-    public String getTurNamn() {
-        return namn;
+    public String getNamnPaTur() {
+        return this.namn;
     }
 
     public List<Tur> getTurLista() {
-        return turLista;
+        return this.turLista;
     }
 
     public void addTur(Tur tur) {
         this.turLista.add(tur);
     }
 
-    public void addTur(String delgivare, int datum, double start, double stop, double rast, int sok, int sokArb, int delg, int delgArb, int ejAv) {
+    /*public void addTur(String delgivare, int datum, double start, double stop, double rast, int sok, int sokArb, int delg, int delgArb, int ejAv) {
         this.turLista.add(new Tur(delgivare, datum, start, stop, rast, sok, sokArb, delg, delgArb, ejAv));
-    }
-
-    public String toString(Tur tur) {
-        return this.namn + ": " + tur.turInfo();
-    }
+    }*/
 
 }
