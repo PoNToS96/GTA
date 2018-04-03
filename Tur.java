@@ -1,4 +1,4 @@
-package com.company;
+package elffors.GTA.projekt;
 
 public class Tur {
     private String delgivare;
@@ -25,9 +25,40 @@ public class Tur {
         this.ejAv = ejAv;
     }
 
-    public String turInfo() {
-        return delgivare + ", " + datum + ", " + sok + ", " + sokArb + ", " + delg + ", " + delgArb + ", " + ejAv;
+    public int getDatum() {
+        return this.datum;
+    }
 
+    public double getStart() {
+        return this.start;
+    }
+
+    public double getStop() {
+        return this.stop;
+    }
+
+    public double getRast() {
+        return this.rast;
+    }
+
+    public int getSok() {
+        return this.sok;
+    }
+
+    public int getSokArb() {
+        return this.sokArb;
+    }
+
+    public int getDelg() {
+        return this.delg;
+    }
+
+    public int getDelgArb() {
+        return this.delgArb;
+    }
+
+    public int getEjAv() {
+        return this.ejAv;
     }
 
 }
