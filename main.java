@@ -1,5 +1,4 @@
-package com.company;
-import java.util.*;
+package elffors.GTA.projekt;
 
 public class Main {
 
@@ -10,7 +9,6 @@ public class Main {
         Tur sodraUmea2 = new Tur("Johan",180425, 11.00, 19.00, 1.00, 25, 3, 15, 2, 3);
         Tur sodraUmea3 = new Tur("Elsa",180431, 14.00, 19.00, 1.00, 7, 1, 7, 3, 1);
         Tur sodraUmea4 = new Tur("Alfred",180523, 16.00, 21.00, 00.30, 12, 0, 10, 1, 2);
-        //skrivTur(sodraUmea);
 
         TurNamn norraUmea = new TurNamn("Norra Umeå");
         norraUmea.addTur(norraUmea1);
@@ -25,13 +23,9 @@ public class Main {
     }
 
     private static void printTur(TurNamn turNamn) {
-        System.out.println(turNamn.getTurNamn());
-        System.out.println("================================");
-        Iterator<Tur> iterator = turNamn.getTurLista().iterator();
-            while(iterator.hasNext()) {
-                System.out.println(iterator.next().turInfo());
-            }
-            System.out.println("================================\n");
-
+        System.out.println("\n" + turNamn.getNamnPaTur() + "\n==============================");
+        for (Tur tur : turNamn.getTurLista()) {
+            System.out.println(tur.getDelg() + ", " + tur.getDatum() + ", " + tur.getSok() + ", " + tur.getSokArb() + ", " + tur.getDelg() + ", " + tur.getDelgArb() + ", " + tur.getEjAv());
+        }
     }
 }
