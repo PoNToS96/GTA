@@ -25,7 +25,7 @@ public class Main {
     private static void printTur(TurNamn turNamn) {
         System.out.println("\n" + turNamn.getNamnPaTur() + "\n==============================");
         for (Tur tur : turNamn.getTurLista()) {
-            System.out.println(tur.getDelg() + ", " + tur.getDatum() + ", " + tur.getSok() + ", " + tur.getSokArb() + ", " + tur.getDelg() + ", " + tur.getDelgArb() + ", " + tur.getEjAv());
+            System.out.println(tur.toString());
         }
     }
 }
