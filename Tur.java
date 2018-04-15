@@ -61,4 +61,12 @@ public class Tur {
         return this.ejAv;
     }
 
+    @Override
+    public String toString() {
+        return datum + "\ndelgivna: " + delg +
+                ", delgivna på arbetet: " + delgArb +
+                ", sök: " + sok +
+                ", sök på arbetet: " + sokArb +
+                ", ej aviserade: " + ejAv;
+    }
 }
