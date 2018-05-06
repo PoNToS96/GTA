@@ -3,27 +3,32 @@ package elffors.GTA.projekt;
 public class Main {
 
     public static void main(String[] args) {
-        Tur norraUmea1 = new Tur("Johan",180228, 10.00, 17.00, 00.30, 15, 1, 17, 2, 5);
-        Tur norraUmea2 = new Tur("Elsa",180315, 13.00, 21.00, 00.30, 12, 1, 13, 2, 2);
-        Tur sodraUmea1 = new Tur("Johan",180325, 15.00, 20.00, 00.30, 7, 1, 15, 2, 3);
-        Tur sodraUmea2 = new Tur("Johan",180425, 11.00, 19.00, 1.00, 25, 3, 15, 2, 3);
-        Tur sodraUmea3 = new Tur("Elsa",180431, 14.00, 19.00, 1.00, 7, 1, 7, 3, 1);
-        Tur sodraUmea4 = new Tur("Alfred",180523, 16.00, 21.00, 00.30, 12, 0, 10, 1, 2);
 
+        //Skapar turer med några initiala värden
+        Tur norraUmea1 = new Tur.Builder("Johan", 180228).start(10.05).stop(17.05).delg(13).build();
+        Tur norraUmea2 = new Tur.Builder("Elsa", 180315).delgArb(3).ejAv(5).delg(13).build();
+
+        //Skapar ett turnamn och ägger till turerna
         TurNamn norraUmea = new TurNamn("Norra Umeå");
         norraUmea.addTur(norraUmea1);
         norraUmea.addTur(norraUmea2);
+
+        //Skriver ut informationen om turnamnet
         printTur(norraUmea);
-        TurNamn sodraUmea = new TurNamn("Södra Umeå");
-        sodraUmea.addTur(sodraUmea1);
-        sodraUmea.addTur(sodraUmea2);
-        sodraUmea.addTur(sodraUmea3);
-        sodraUmea.addTur(sodraUmea4);
-        printTur(sodraUmea);
+
+        //Lägger in värden på fler attribut i turen
+        norraUmea1.setSok(3);
+        norraUmea1.setDelgArb(2);
+        norraUmea1.setRast(0.30);
+        norraUmea2.setStart(18.00);
+        norraUmea2.setStop(21.30);
+
+        //Skriver ut informationen om turnamnet
+        printTur(norraUmea);
     }
 
     private static void printTur(TurNamn turNamn) {
-        System.out.println("\n" + turNamn.getNamnPaTur() + "\n==============================");
+        System.out.println("\n" + turNamn.getNamnPaTur() + "\n===========================================");
         for (Tur tur : turNamn.getTurLista()) {
             System.out.println(tur);
         }
