@@ -22,9 +22,4 @@ public class TurNamn {
     public void addTur(Tur tur) {
         this.turLista.add(tur);
     }
-
-    /*public void addTur(String delgivare, int datum, double start, double stop, double rast, int sok, int sokArb, int delg, int delgArb, int ejAv) {
-        this.turLista.add(new Tur(delgivare, datum, start, stop, rast, sok, sokArb, delg, delgArb, ejAv));
-    }*/
-
 }
